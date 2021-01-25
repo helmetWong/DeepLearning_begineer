@@ -17,13 +17,7 @@ The program will output the class name of the predicted image.
 
 # input dataset for training:
 Download the "flower_photos.tgz" from below website, and put into "date_dir"
-/datasets/flowers_photos/daisy/
-/datasets/flowers_photos/dandelion/
-/datasets/flowers_photos/roses/
-/datasets/flowers_photos/sunflowers/
-/datasets/flowers_photos/tulips/
-# https://www.tensorflow.org/tutorials/images/classification
-# https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz
+https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz
 data_dir = "E:/datasets/flower_photos/"
 
 # input image for prediction: "608.jpg" or another images
