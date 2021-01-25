@@ -1,5 +1,5 @@
 # DeepLearning_Jan2020
-A basic introduction to learn CNN
+A basic introduction to learning CNN
 
 
 ################################################################################################
