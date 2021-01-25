@@ -13,9 +13,9 @@ A basic introduction to learn CNN
 #
 ################################################################################################
 
-program: vgg16_intro.py
+# program: vgg16_intro.py
 
-input dataset for training:
+# input dataset for training:
 # Download the "flower_photos.tgz" from below website, and put into "date_dir"
 # /datasets/flowers_photos/daisy/
 # /datasets/flowers_photos/dandelion/
@@ -24,10 +24,10 @@ input dataset for training:
 # /datasets/flowers_photos/tulips/
 # https://www.tensorflow.org/tutorials/images/classification
 # https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz
-data_dir = "E:/datasets/flower_photos/"
+# data_dir = "E:/datasets/flower_photos/"
 
-input image for prediction:
-"608.jpg" or another images
+# input image for prediction:
+# "608.jpg" or another images
 
-output:
-print "roses" on the command line. 
+# output:
+# print "roses" on the command line. 
