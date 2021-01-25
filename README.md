@@ -26,8 +26,6 @@ A basic introduction to learn CNN
 # https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz
 # data_dir = "E:/datasets/flower_photos/"
 
-# input image for prediction:
-# "608.jpg" or another images
+# input image for prediction: "608.jpg" or another images
 
-# output:
-# print "roses" on the command line. 
+# output: print "roses" on the command line. 
