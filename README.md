@@ -16,9 +16,9 @@ The program will output the class name of the predicted image.
 # program: vgg16_intro.py
 
 # input dataset for training:
-Download the "flower_photos.tgz" from below website, and put into "date_dir"
-https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz
-data_dir = "E:/datasets/flower_photos/"
+Download the "flower_photos.tgz" from below website, and put into "date_dir"  
+https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz  
+data_dir = "E:/datasets/flower_photos/"  
 
 # input image for prediction: "608.jpg" or another images
 
