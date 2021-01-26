@@ -1,4 +1,4 @@
-# DeepLearning_Jan2020
+# DeepLearning_2020Q
 A basic introduction to learning CNN
 
 
