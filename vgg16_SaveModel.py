@@ -77,8 +77,8 @@ def VGG16_v1(input_shape = (224,224,3), classes = num_classes):
     output = Dense(num_classes, activation='softmax', name = 'output_layer')(X)
 
     model = Model(inputs=model.inputs, outputs=output)
-
-    opt = SGD(lr=0.00005, momentum=0.9)         
+    opt = Adam(lr=0.0001)
+#    opt = SGD(lr=0.00005, momentum=0.9)         
     model.compile(optimizer=opt, loss='categorical_crossentropy', metrics=['accuracy'])
     return model
 
@@ -96,14 +96,14 @@ history = model.fit(train_ds,
 
 ############################################################################
 # Save a model
-model.save("vgg16_t2.h5")
+model.save("vgg16_t3.h5")
 
 
 ############################################################################
 # Save history of training
 
 df = pd.DataFrame(history.history)
-filename = 'history_vgg16_t2.csv'
+filename = 'history_vgg16_t3.csv'
 with open (filename, mode ='w') as f:
     df.to_csv(f)
 
