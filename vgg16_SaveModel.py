@@ -5,22 +5,19 @@ import matplotlib.pyplot as plt
 
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras.layers import Flatten, Dense
+from tensorflow.keras.layers import Input, Flatten, Dense, Conv2D, MaxPool2D, ZeroPadding2D, Dropout, BatchNormalization
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from tensorflow.keras.preprocessing import image
 from tensorflow.keras import layers
 from tensorflow.keras.applications.vgg16 import VGG16
 from tensorflow.keras.models import Model 
 from tensorflow.keras.optimizers import Adam, SGD
 
+
 ################################################################################################
 #
-# This program demonstrates how to train a Convolutional Neural Network CNN or ConvNet -> VGG16
-# Firstly, we should download some photos as the dateset to train a VGG16
-# We download and create a flower datasets with 5 classes of totaling 3,670 images
-# Secondly, we use the dataset to train a VGG16 model,which it is directly downloaded from keras
-# Thirdly, after having trained the VGG16 model, we predict an arbitrary flowers image. 
-# The program will output the class name of the predicted image. 
+# This program continues from the program, "vgg16_intro.py" which it does not contain save function.
+# This program can save the model of VGG16 and weights into a h5 format, 
+# and the model in the program, "vgg16_LoadModel.py" and predict a single image. 
 #
 ################################################################################################
 
@@ -41,11 +38,12 @@ img_height = 224
 
 data_dir = "E:/datasets/flower_photos/"
 
+
 ############################################################################
 # load image from data_dir in batches
 
-datagen = ImageDataGenerator(rescale = 1./255,          #normalization of the pixels to [0,1]
-                             validation_split = 0.2)    #set validation split
+datagen = ImageDataGenerator(rescale = 1./255,
+                             validation_split = 0.2)  #set validation split
 classes = ['daisy', 'dandelion', 'roses', 'sunflowers', 'tulips']
 num_classes = len(classes)
 
@@ -64,6 +62,7 @@ val_ds = datagen.flow_from_directory(directory = data_dir,
                                      shuffle = False,
                                      batch_size = batch_size, 
                                      subset='validation')
+
 
 ############################################################################
 # Use VGG16 with pre-trained weights
@@ -87,7 +86,7 @@ model = VGG16_v1(input_shape = [img_width,img_height,3], classes = num_classes)
 
 model.summary()
 
-epochs = 15    
+epochs = 15     
 history = model.fit(train_ds, 
                     steps_per_epoch = len(train_ds),  #batch_size
                     epochs = epochs,
@@ -96,15 +95,16 @@ history = model.fit(train_ds,
                     )
 
 ############################################################################
-# Find any flower image for prediciton
-img = image.load_img("673.jpg",target_size=(224,224))
-img = np.asarray(img)
-img = np.expand_dims(img, axis=0)
+# Save a model
+model.save("vgg16_t2.h5")
 
 
-output = model.predict(img)
-index_max = np.argmax(output)
-print("*"*120)
-print()
-print(classes[index_max])
+############################################################################
+# Save history of training
+
+df = pd.DataFrame(history.history)
+filename = 'history_vgg16_t2.csv'
+with open (filename, mode ='w') as f:
+    df.to_csv(f)
+
 
