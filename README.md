@@ -11,14 +11,14 @@ Secondly, we use the dataset to train a VGG16 model.
 Thirdly, after having trained the VGG16 model, we predict an arbitrary flowers image.  
 The program will output the class name of the predicted image.  
 
-# input dataset for training:
+input dataset for training:
 Download the "flower_photos.tgz" from below website, and put into "date_dir"  
 https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz  
 data_dir = "E:/datasets/flower_photos/"  
 
-# input image for prediction: "673.jpg" or another images
+input image for prediction: "673.jpg" or another images
 
-# output: print "roses" on the command prompt. 
+output: print "roses" on the command prompt. 
 
 #######################################################################################
 
@@ -29,11 +29,11 @@ data_dir = "E:/datasets/flower_photos/"
 This program continues from the program, "vgg16_SaveModel.py".
 This program demonstrates how to load a CNN model and to predict a single image. 
 
-# output(1): Save a model
-# model.save("vgg16_t2.h5")
+output(1): Save a model
+model.save("vgg16_t2.h5")
 
-# output(2): Save history of training
-# save histroy into 'history_vgg16_t2.csv'
+output(2): Save history of training
+save histroy into 'history_vgg16_t2.csv'
 
 ***************************************************************************************
 
@@ -44,11 +44,11 @@ This program demonstrates how to load a CNN model and to predict a single image.
 This program continues from the program, "vgg16_SaveModel.py".
 This program demonstrates how to load a CNN model and to predict a single image. 
 
-# input(1): vgg16_t2.h5
+input(1): vgg16_t2.h5
 
-# input(2): image for prediction: "673.jpg" or another images
+input(2): image for prediction: "673.jpg" or another images
 
-# output: imshow the input image, and prediction and accuracy in %
+output: imshow the input image, and prediction and accuracy in %
 
 #######################################################################################
 
@@ -59,9 +59,9 @@ This program demonstrates how to load a CNN model and to predict a single image.
 This program continues from the program, "vgg16_SaveModel.py".
 This program demonstrates how to plot the training curves aftering training. 
 
-# input: history_vgg16_t2.csv
+input: history_vgg16_t2.csv
 
-# Output: two charts
+Output: two charts
 
 ***************************************************************************************
 
