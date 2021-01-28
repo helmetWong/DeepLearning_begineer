@@ -18,7 +18,7 @@ from tensorflow.keras.callbacks import EarlyStopping
 ################################################################################################
 #
 # This program continues from the program, "vgg16_intro.py" and "vgg16_SaveModel.py".
-# This program demonstrates data augmentations and transfer learning
+# This program demonstrates data augmentations, transfer learning and exponentialDecay learning rate.  
 # We use both vgg16 and vgg19 
 #
 # We also apply early stopping in training  
