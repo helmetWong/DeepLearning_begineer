@@ -79,6 +79,18 @@ I prefer Method A for simple CNN.  I will use Method B for more complicated CNN.
 We also apply early stopping in training.  
 We can then use "vgg16_LoadModel.py" to load the saved model and predict a single image. 
 
-
 #######################################################################################
+
+***************************************************************************************
+
+# program vggTransferLearning.py".
+
+This program continues from the program, "vgg16_intro.py" and "vgg16_SaveModel.py".  
+This program demonstrates data augmentations and transfer learning.  
+We use both vgg16 and vgg19.  
+
+We also apply early stopping in training.    
+We can then use "vgg16_LoadModel.py" to load the saved model and predict a single image. 
+
+***************************************************************************************
 
