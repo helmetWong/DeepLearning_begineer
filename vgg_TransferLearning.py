@@ -131,6 +131,9 @@ model = VGG19_v1(input_shape = [img_width,img_height,3], classes = num_classes)
 
 model.summary()
 
+############################################################################
+# Use learnng rate schedule -> exponentialDecay
+
 initial_learning_rate = 0.001
 lr_schedule = tf.keras.optimizers.schedules.ExponentialDecay(
     initial_learning_rate,
