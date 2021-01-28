@@ -65,5 +65,20 @@ Output: two charts
 
 ***************************************************************************************
 
+#######################################################################################
 
+# program: vgg_Models.py".
+
+This program continues from the program, "vgg16_intro.py" and "vgg16_SaveModel.py".  
+This program demonstrates the architecture of vgg16 and vgg19  
+There are two main methods to construct a CNN model.   
+  Method A:  model = Sequential()      
+  Method B:  model = Model(inputs=input, outputs=output)   
+
+I prefer Method A for simple CNN.  I will use Method B for more complicated CNN.  
+We also apply early stopping in training.  
+We can then use "vgg16_LoadModel.py" to load the saved model and predict a single image. 
+
+
+#######################################################################################
 
