@@ -1,6 +1,6 @@
 # DeepLearing_beginner
 # 2020Q1
-A basic introduction to learning CNN through application of VGG models.
+A basic introduction to learning CNN through applications of VGG models.
 
 #######################################################################################
 # program: vgg16_intro.py
