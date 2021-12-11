@@ -1,5 +1,5 @@
 # DeepLearing_beginner
-# 2020Q1
+# 2021Q1
 A basic introduction to learning CNN through applications of VGG models.
 
 #######################################################################################
